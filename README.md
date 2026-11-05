@@ -1,248 +1,302 @@
 # ConectaIA
+### Guia Digital Inclusivo para o Uso Seguro e Consciente da Inteligência Artificial
 
-**ConectaIA: Guia Digital Inclusivo para o Uso Seguro e Consciente da Inteligência Artificial** é um protótipo acadêmico de aplicação web desenvolvido para aproximar a tecnologia do cotidiano de pessoas idosas e de quem deseja ganhar mais confiança no ambiente digital. A interface reúne explicações em linguagem simples, uma área de conversa, trilhas educativas e controles de acessibilidade.
+![Status](https://img.shields.io/badge/Status-Prot%C3%B3tipo%20Acad%C3%AAmico-blue)
+![React](https://img.shields.io/badge/React-18.3.1-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.7.2-3178C6?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-6.0.5-646CFF?logo=vite)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-## Objetivo
+## 1. Apresentação
 
-O projeto busca facilitar o primeiro contato com a inteligência artificial, apresentar exemplos de uso no dia a dia e incentivar hábitos de navegação mais seguros.
+O **ConectaIA** é um projeto acadêmico de desenvolvimento de uma aplicação web educacional, concebido com o propósito de promover a inclusão digital e facilitar o acesso às tecnologias contemporâneas, especialmente à inteligência artificial.
 
-## Funcionalidades
+A solução foi idealizada prioritariamente para pessoas idosas e indivíduos com pouca familiaridade com recursos tecnológicos, considerando a necessidade de interfaces intuitivas, linguagem acessível e mecanismos que favoreçam a autonomia no ambiente digital.
 
-### Conversa com a IA
+A plataforma reúne funcionalidades de interação com inteligência artificial generativa, conteúdos educativos, orientações sobre segurança digital e recursos de acessibilidade, proporcionando uma experiência de aprendizagem orientada e progressiva.
 
-A área de conversa permite enviar perguntas por texto e consultar respostas por meio de uma integração com a API do Google Gemini. O serviço tenta receber as respostas progressivamente e utiliza um conjunto de respostas locais como contingência quando as tentativas de comunicação com a API não retornam uma resposta válida.
+O projeto fundamenta-se na utilização da tecnologia como instrumento de inclusão social, democratização do conhecimento e desenvolvimento de competências digitais.
 
-As respostas locais são pré-programadas e escolhidas por palavras-chave. Elas não são geradas pelo Gemini. Entre os assuntos previstos estão cumprimentos, uso do celular, e-mail, inteligência artificial, prevenção de golpes e orientações gerais sobre saúde.
+## 2. Objetivo geral
 
-No código desta versão, os modelos configurados são `gemini-3.5-flash` e `gemini-3.6-flash`. O Google identifica `gemini-3.5-flash` como descontinuado e informa que as solicitações para esse identificador são encaminhadas automaticamente para `gemini-3.6-flash`. Consulte a [documentação oficial do modelo](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash) para acompanhar alterações.
+Desenvolver uma aplicação web educacional que contribua para a inclusão e a alfabetização digital, oferecendo recursos interativos e conteúdos orientativos que auxiliem os usuários na compreensão e utilização segura das tecnologias digitais e da inteligência artificial.
 
-### Trilhas de Sucesso
+### Objetivos específicos
 
-A área educativa reúne quatro temas:
+- Facilitar a compreensão de conceitos relacionados à inteligência artificial.
+- Promover a autonomia na utilização de dispositivos móveis e ferramentas digitais.
+- Disponibilizar conteúdos educativos sobre comunicação e navegação na internet.
+- Incentivar práticas de segurança e proteção de informações pessoais.
+- Incorporar recursos de acessibilidade para melhorar a experiência de utilização.
+- Demonstrar a aplicação de conceitos de Engenharia de Software no desenvolvimento de uma solução tecnológica.
 
-- **Uso do celular:** orientações para conhecer recursos e configurações do aparelho.
-- **Assistentes digitais:** introdução à interação com assistentes e ferramentas de inteligência artificial.
-- **Mensagens e chamadas:** dicas para se comunicar com familiares e outras pessoas.
-- **Segurança na internet:** recomendações para reconhecer situações suspeitas e adotar hábitos digitais mais seguros.
+## 3. Funcionalidades do sistema
 
-### Sobre a IA
+### 3.1. Conversa com Inteligência Artificial
 
-Apresenta explicações introdutórias sobre inteligência artificial e exemplos de tarefas cotidianas em que ferramentas digitais podem ajudar.
+Módulo de interação por linguagem natural, integrado à API do Google Gemini, permitindo que os usuários realizem perguntas e recebam orientações.
 
-### Acessibilidade
+O assistente foi concebido para utilizar linguagem simples, respostas objetivas e explicações organizadas em etapas, considerando as necessidades de usuários com menor familiaridade tecnológica.
 
-A interface oferece controles de escala visual entre 90% e 130%, em incrementos de 10%, ativação de alto contraste e opções de velocidade para leitura em voz alta. Também há uma opção para restaurar os controles aos valores padrão. A escala visual afeta a página como um todo, e não apenas o tamanho das letras.
+A implementação contempla:
+- Envio de perguntas por texto.
+- Processamento do histórico recente da conversa.
+- Recebimento progressivo de respostas.
+- Orientações personalizadas conforme o contexto da interação.
+- Respostas locais predefinidas como mecanismo de contingência.
 
-### Recursos de voz
+### 3.2. Trilhas de Sucesso
 
-Em navegadores compatíveis, o reconhecimento de fala permite preencher a pergunta por voz. A leitura em voz alta usa a síntese de fala do navegador. Estão previstos os modos de velocidade lenta, normal e rápida. Os recursos dependem do navegador, das permissões concedidas e dos recursos de áudio do dispositivo; a digitação continua disponível como alternativa.
+Área educacional estruturada em quatro eixos temáticos:
 
-### Ajuda e orientação
+**1. Aprendendo a usar o celular:** orientações sobre funcionalidades, configurações e utilização de dispositivos móveis.
 
-A área de ajuda apresenta orientações para encontrar os principais recursos, iniciar uma conversa, acessar as trilhas e ajustar a acessibilidade. Ela não aciona serviços de emergência nem envia mensagens a terceiros.
+**2. Conversando com assistentes digitais:** introdução à utilização de assistentes virtuais e ferramentas de inteligência artificial.
 
-## Tecnologias utilizadas
+**3. Mensagens e videochamadas:** orientações para utilização de ferramentas de comunicação digital.
 
-As dependências declaradas no `package.json` incluem:
+**4. Segurança na internet:** recomendações para identificação de golpes, proteção de senhas e utilização consciente dos ambientes digitais.
 
-- **React** (`^18.3.1`) e **React DOM** (`^18.3.1`) para a interface.
-- **TypeScript** (`^5.7.2`) para tipagem e organização do código.
-- **Vite** (`^6.0.5`) para desenvolvimento e compilação.
-- **Lucide React** (`^0.468.0`) para os ícones.
-- **Google Gemini API**, acessada por requisições HTTP no serviço `src/services/gemini.ts`.
-- **Web Speech API** para reconhecimento de fala nos navegadores compatíveis.
-- **SpeechSynthesis API** para leitura de texto em voz alta.
-- **HTML e CSS** para estrutura e apresentação visual.
+### 3.3. Sobre a Inteligência Artificial
 
-## Organização do repositório
+Apresenta conteúdos introdutórios sobre inteligência artificial, suas características, aplicações e possibilidades de utilização no cotidiano.
+
+### 3.4. Acessibilidade
+
+Disponibiliza recursos para adaptação da interface às necessidades dos usuários:
+
+- Ajuste da escala visual entre 90% e 130%.
+- Ativação do modo de alto contraste.
+- Leitura de conteúdos em voz alta.
+- Ajuste da velocidade de leitura.
+- Restauração das configurações visuais padrão.
+
+### 3.5. Recursos de voz
+
+A aplicação utiliza recursos disponíveis nos navegadores para reconhecimento de fala e síntese de voz, possibilitando formas alternativas de interação.
+
+A disponibilidade desses recursos depende da compatibilidade do navegador, das permissões concedidas e dos dispositivos utilizados.
+
+### 3.6. Ajuda e orientação
+
+Área destinada à apresentação de instruções sobre navegação, utilização das funcionalidades e acesso aos conteúdos educativos.
+
+## 4. Tecnologias utilizadas
+
+O desenvolvimento do ConectaIA utiliza tecnologias voltadas à construção de aplicações web modernas e interativas.
+
+| Tecnologia | Finalidade |
+|---|---|
+| React 18 | Construção da interface e componentes. |
+| TypeScript 5 | Tipagem e organização do código. |
+| Vite 6 | Ambiente de desenvolvimento e compilação. |
+| HTML5 | Estruturação da aplicação. |
+| CSS3 | Estilização e apresentação visual. |
+| Lucide React | Biblioteca de ícones. |
+| Google Gemini API | Integração com inteligência artificial generativa. |
+| Web Speech API | Reconhecimento de fala. |
+| SpeechSynthesis API | Conversão de texto em áudio. |
+| npm | Gerenciamento de dependências. |
+
+## 5. Arquitetura do sistema
+
+A aplicação apresenta uma arquitetura web predominantemente concentrada no front-end, organizada por meio de componentes React e serviços desenvolvidos em TypeScript.
+
+A estrutura contempla a separação entre a interface, os estilos visuais e o serviço responsável pela comunicação com a inteligência artificial.
+
+### Principais componentes
+
+- **App.tsx:** componente principal, responsável pela interface, navegação e gerenciamento dos estados da aplicação.
+- **main.tsx:** ponto de entrada e inicialização da aplicação React.
+- **styles.css:** organização dos estilos e elementos visuais.
+- **gemini.ts:** serviço responsável pela comunicação com a API do Google Gemini e pelo gerenciamento das respostas locais de contingência.
+- **vite.config.ts:** configuração do ambiente de desenvolvimento e compilação.
+
+A versão apresentada constitui um protótipo acadêmico e não contempla um back-end próprio, banco de dados ou sistema de autenticação de usuários.
+
+### Diagrama de arquitetura
+
+![Arquitetura do ConectaIA](./Arquitetura%20do%20Projeto%20Conecta.IA.png)
+
+### Fluxos e modelagem
+
+A modelagem do sistema está documentada nos arquivos disponibilizados no repositório, contemplando requisitos, casos de uso, fluxos de navegação e diagramas.
+
+## 6. Organização do repositório
 
 ```text
-ConectaIA_Entrega_Academica/
+PROJETO-4-ENGENHARIA-DE-SOFTWARE/
+│
+├── .gitignore
+├── LICENSE
 ├── README.md
-├── 01_RELATORIO/
-├── 02_MODELAGEM/
-│   ├── README.md
-│   ├── Arquitetura_e_Diagrama.md
-│   ├── Casos_de_Uso_e_Fluxos.md
-│   ├── Fluxos_e_Diagramas.md
-│   └── Requisitos_e_Rastreabilidade.md
-├── 03_USUARIO/
-│   └── TESTES_USUARIOS.xlsx
-├── 04_TESTES_E_VALIDACAO/
-│   └── Plano_de_Testes.xlsx
-├── 05_APRESENTACAO/
-├── 06_APP/
-│   └── ConectaIA_Proto1/
-│       ├── index.html
-│       ├── package.json
-│       ├── package-lock.json
-│       ├── vite.config.ts
-│       └── src/
-│           ├── App.tsx
-│           ├── main.tsx
-│           ├── styles.css
-│           └── services/
-│               └── gemini.ts
-└── 07_FLUXOGRAMA/
-    ├── Arquitetura do Projeto Conecta.IA.png
-    └── mermaid-diagram.png
+│
+├── ConectaIA_Proto1/
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── vite.config.ts
+│   ├── tsconfig.json
+│   │
+│   └── src/
+│       ├── App.tsx
+│       ├── main.tsx
+│       ├── styles.css
+│       └── services/
+│           └── gemini.ts
+│
+├── Arquitetura_e_Diagrama.md
+├── Casos_de_Uso_e_Fluxos.md
+├── Fluxos_e_Diagramas.md
+├── Requisitos_e_Rastreabilidade.md
+│
+├── Plano_de_Testes.xlsx
+├── TESTES_USUARIOS.xlsx
+│
+├── Arquitetura do Projeto Conecta.IA.png
+└── mermaid-diagram.png
 ```
 
-Arquivos gerados durante a instalação ou compilação, como `node_modules/`, `dist/` e `*.tsbuildinfo`, não fazem parte dos arquivos-fonte necessários para compreender o projeto. Arquivos com credenciais, como `.env`, não devem ser compartilhados.
+## 7. Requisitos para execução
 
-## Diagrama da arquitetura
+Para executar o projeto em ambiente local, são necessários:
 
-A imagem abaixo apresenta a visão geral da arquitetura documentada do projeto.
+- Node.js instalado.
+- npm para gerenciamento de dependências.
+- Navegador atualizado.
+- Conexão com a internet para instalação das dependências e utilização da integração com o Gemini.
 
-![Arquitetura do ConectaIA](<07_FLUXOGRAMA/Arquitetura do Projeto Conecta.IA.png>)
+## 8. Instalação e execução
 
-## Requisitos para execução
+### 8.1. Clonar o repositório
 
-- **Node.js:** recomenda-se a versão **24 LTS** para preparar um ambiente atualizado e reproduzível. O pacote não registra a versão exata de Node.js usada originalmente pela equipe.
-- **npm:** instalado junto com o Node.js; a versão disponível pode ser conferida no terminal.
-- **Navegador atualizado:** necessário para abrir a aplicação.
-- **Conexão à internet:** necessária para instalar as dependências e utilizar a integração com o Gemini.
-- **Microfone e permissão do navegador:** necessários para testar o reconhecimento de fala.
+Abra o terminal ou PowerShell e execute:
 
-Para conferir as versões instaladas, abra o PowerShell e execute:
-
-```powershell
-node --version
-npm.cmd --version
+```bash
+git clone https://github.com/gabrielvendasrocha-boop/PROJETO-4---ENGENHARIA-DE-SOFTWARE---FESP-PR.git
 ```
 
-Consulte também a [página oficial de versões do Node.js](https://nodejs.org/pt/about/previous-releases) para verificar o estado de suporte das versões LTS.
+Entre na pasta do projeto:
 
-## Como obter o projeto
-
-1. Baixe o arquivo ZIP disponibilizado pela equipe.
-2. Extraia o ZIP por completo para uma pasta do computador.
-3. Abra a pasta `ConectaIA_Entrega_Academica`, que contém a pasta `06_APP` e este README.
-4. Se o ZIP tiver uma pasta externa chamada `ENTREGA`, entre nela para encontrar `ConectaIA_Entrega_Academica`.
-
-## Como executar no Windows
-
-Abra o PowerShell na pasta `ConectaIA_Entrega_Academica` e entre na pasta da aplicação:
-
-```powershell
-cd .\06_APP\ConectaIA_Proto1
+```bash
+cd PROJETO-4---ENGENHARIA-DE-SOFTWARE---FESP-PR
 ```
 
-Instale as dependências:
+### 8.2. Acessar a aplicação
+
+```bash
+cd ConectaIA_Proto1
+```
+
+### 8.3. Instalar as dependências
+
+```bash
+npm install
+```
+
+Caso o PowerShell apresente restrições na execução do npm, utilize:
 
 ```powershell
 npm.cmd install
 ```
 
-Inicie o servidor de desenvolvimento:
+### 8.4. Executar a aplicação
 
-```powershell
-npm.cmd run dev
+```bash
+npm run dev
 ```
 
-O Vite exibirá no terminal o endereço local para abrir a aplicação no navegador. Normalmente, o endereço é `http://localhost:5173/`. Para encerrar o servidor, pressione `Ctrl+C` no terminal.
+Após a inicialização, o Vite disponibilizará um endereço local, normalmente:
 
-O comando `npm.cmd` também é útil no PowerShell quando a política de execução bloqueia o script `npm.ps1`.
-
-## Configuração e segurança da integração com o Gemini
-
-A integração com o Gemini está concentrada em `src/services/gemini.ts`. O serviço utiliza uma chave de API para fazer requisições ao endpoint do Google Gemini, tenta a resposta progressiva e, se as tentativas com os modelos configurados não retornarem conteúdo válido, recorre às respostas locais.
-
-**Atenção à segurança:** no pacote analisado, a implementação inclui uma credencial escrita diretamente no código e uma referência à variável `VITE_GEMINI_API_KEY`. Variáveis com prefixo `VITE_` podem ser incorporadas aos arquivos enviados ao navegador, portanto não são apropriadas para guardar segredos. A chave exposta deve ser revogada, e a integração deve ser ajustada para que a credencial fique em um serviço de servidor antes de publicar ou distribuir uma versão pública. Não copie chaves reais para este README, para o Git ou para o front-end.
-
-A pasta entregue também contém arquivos de ambiente e artefatos de compilação. Antes de compartilhar uma versão limpa, remova credenciais e exclua do pacote `node_modules/`, `dist/` e arquivos temporários de compilação. Um `.gitignore` básico pode conter:
-
-```gitignore
-node_modules/
-dist/
-.env
-.env.*
-!.env.example
-*.tsbuildinfo
+```text
+http://localhost:5173/
 ```
 
-O arquivo `.env.example`, caso seja utilizado, deve conter apenas nomes de variáveis e valores fictícios, nunca credenciais válidas. O comando de execução local, por si só, não confirma que a integração com o Gemini esteja configurada ou funcionando.
+Acesse esse endereço no navegador para utilizar a aplicação.
 
-## Como utilizar
+### 8.5. Gerar a compilação de produção
 
-1. Inicie a aplicação e abra no navegador o endereço exibido pelo Vite.
-2. Entre em **Conversa com a IA**, digite uma pergunta simples, como “O que é inteligência artificial?”, e envie a mensagem.
-3. Se o navegador oferecer reconhecimento de fala, use o controle de microfone e conceda a permissão solicitada.
-4. Quando houver uma resposta, experimente o recurso de leitura em voz alta.
-5. Acesse **Trilhas de Sucesso** e escolha um dos quatro temas educativos.
-6. Consulte **Sobre a IA** para ler as explicações introdutórias.
-7. Abra as configurações de acessibilidade para alterar a escala visual, ativar o alto contraste ou ajustar a velocidade de leitura.
-8. Consulte **Ajuda** quando precisar de orientação sobre a interface.
-
-## Compilação de produção
-
-Na pasta `06_APP\ConectaIA_Proto1`, execute:
-
-```powershell
-npm.cmd run build
+```bash
+npm run build
 ```
 
-O script definido no `package.json` executa a verificação de tipos do TypeScript e, em seguida, gera a compilação de produção com o Vite. Para visualizar localmente o resultado compilado, execute:
+Para visualizar a versão compilada:
 
-```powershell
-npm.cmd run preview
+```bash
+npm run preview
 ```
 
-A compilação deve ser executada no ambiente de entrega para confirmar que as dependências podem ser instaladas e que o projeto compila. A existência dos comandos no `package.json` não significa que a compilação tenha sido validada em todos os computadores.
+## 9. Segurança e privacidade
 
-## Documentação e materiais de referência
+A segurança constitui um aspecto essencial para a utilização responsável de ferramentas digitais e de inteligência artificial.
 
-- [README da modelagem](02_MODELAGEM/README.md)
-- [Arquitetura e diagrama](02_MODELAGEM/Arquitetura_e_Diagrama.md)
-- [Casos de uso e fluxos](02_MODELAGEM/Casos_de_Uso_e_Fluxos.md)
-- [Fluxos e diagramas](02_MODELAGEM/Fluxos_e_Diagramas.md)
-- [Requisitos e rastreabilidade](02_MODELAGEM/Requisitos_e_Rastreabilidade.md)
-- [Material de avaliação com usuários](03_USUARIO/TESTES_USUARIOS.xlsx)
-- [Plano de testes](04_TESTES_E_VALIDACAO/Plano_de_Testes.xlsx)
-- [Diagramas do projeto](07_FLUXOGRAMA/)
+O ConectaIA apresenta orientações relacionadas à proteção de informações pessoais, prevenção de golpes e utilização consciente dos recursos tecnológicos.
 
-## Testes e validação
+A integração com o Google Gemini exige atenção especial ao gerenciamento de credenciais.
 
-A planilha `04_TESTES_E_VALIDACAO/Plano_de_Testes.xlsx` reúne os cenários que orientam a verificação do sistema. Os requisitos e casos de uso servem como referência para comparar o comportamento esperado com o comportamento observado.
+**Importante:** chaves de API não devem ser publicadas no repositório nem incorporadas diretamente ao código disponibilizado ao navegador. O uso de variáveis com prefixo `VITE_` não garante sigilo, pois seus valores podem ser incorporados à aplicação compilada.
 
-Durante a validação, recomenda-se registrar a versão avaliada, o sistema operacional e navegador utilizados, os casos executados, os resultados observados, as falhas encontradas e as evidências correspondentes. Um plano de testes representa o planejamento da avaliação; um caso só deve ser considerado aprovado depois de ser executado e ter seu resultado registrado.
+Para disponibilização pública, recomenda-se implementar uma camada de back-end responsável por proteger as credenciais e intermediar as requisições ao serviço externo.
 
-Os principais cenários a verificar são:
+As interações com a inteligência artificial podem envolver o envio de perguntas e histórico de conversa ao provedor externo. Portanto, os usuários devem evitar compartilhar senhas, códigos de autenticação, dados bancários e informações pessoais sensíveis.
 
-- navegação entre as seções e acesso às quatro trilhas;
-- envio de mensagens, resposta do Gemini e uso das respostas locais de contingência;
-- tratamento de falhas de conexão e de respostas inválidas;
-- entrada por voz e alternativa de digitação;
-- leitura em voz alta e ajuste de velocidade;
-- escala visual, alto contraste, navegação por teclado e foco visível;
-- apresentação em telas menores;
-- execução de `npm.cmd run build` em um ambiente limpo.
+As respostas geradas por inteligência artificial podem apresentar imprecisões e devem ser verificadas em fontes confiáveis.
 
-## Limitações e uso responsável
+## 10. Documentação acadêmica e testes
 
-- A resposta gerada pelo Gemini depende da disponibilidade do serviço externo, da conexão e da configuração da integração.
-- As respostas locais são predefinidas e não devem ser confundidas com respostas geradas pela IA.
-- O reconhecimento de fala e a leitura em voz alta dependem do navegador, das permissões e dos recursos do dispositivo.
-- No pacote analisado, não foi localizado um back-end próprio, banco de dados ou autenticação de usuários; a chamada ao Gemini descrita em `src/services/gemini.ts` é feita diretamente pelo front-end.
-- Perguntas e parte do histórico da conversa são enviados ao provedor externo para gerar respostas. Evite compartilhar senhas, códigos de autenticação, dados bancários ou informações pessoais sensíveis.
-- Respostas de IA podem conter erros. Confira informações importantes em fontes confiáveis; o sistema não substitui orientação profissional médica, financeira ou atendimento de emergência.
-- A presença de controles de acessibilidade não comprova, por si só, conformidade com todas as diretrizes de acessibilidade.
+O repositório reúne materiais relacionados às etapas de especificação, modelagem e planejamento de validação do sistema.
 
-## Equipe e contexto acadêmico
+Entre os documentos disponibilizados estão:
 
-- **Instituição:** Faculdade de Educação Superior do Paraná (FESPPR), mantida pela Fundação de Estudos Sociais do Paraná.
-- **Curso:** Bacharelado em Sistemas de Informação.
-- **Disciplina:** Engenharia de Software.
-- **Professor:** André Roberto Guerra.
-- **Período:** 2º período.
+- Arquitetura e diagramas do sistema.
+- Casos de uso e fluxos de interação.
+- Requisitos funcionais e não funcionais.
+- Matriz de rastreabilidade.
+- Plano de testes.
+- Material de avaliação com usuários.
+- Diagramas de representação da solução.
 
-| Integrante | Contribuição registrada no projeto |
-| --- | --- |
-| Danilo Depetris Soares | Desenvolvimento do README |
-| Luís Gustavo Bueno Taquete | Desenvolvimento do back-end |
-| Gabriel Weber da Rocha | Desenvolvimento do front-end |
-| Júlia Barbosa de Almeida | Relatório técnico |
-| Nityananda Portellada | Validação do sistema |
-| Ana Carolina de Proença | Apresentação em slides |
+Os documentos de testes apresentam os cenários planejados para avaliação do sistema. A aprovação de cada cenário depende de sua execução e do registro dos respectivos resultados.
 
-As contribuições devem refletir as atividades efetivamente realizadas pelo grupo. O nome oficial da instituição pode ser conferido no [site da FESP](https://fesppr.edu.br/).
+## 11. Limitações do protótipo
+
+O ConectaIA encontra-se caracterizado como um protótipo acadêmico, possuindo limitações que devem ser consideradas:
+
+- Dependência de serviços externos para geração de respostas pela inteligência artificial.
+- Dependência de compatibilidade do navegador para os recursos de voz.
+- Ausência de banco de dados próprio.
+- Ausência de autenticação e gerenciamento de usuários.
+- Necessidade de evolução da arquitetura de segurança para disponibilização pública da integração com a IA.
+- Necessidade de validação sistemática de usabilidade, acessibilidade e desempenho.
+
+Essas limitações representam oportunidades para futuras melhorias e evolução tecnológica.
+
+## 12. Contexto acadêmico
+
+O projeto foi desenvolvido no contexto acadêmico do curso de Bacharelado em Sistemas de Informação, como atividade prática relacionada à disciplina de Engenharia de Software.
+
+**Instituição:** Faculdade de Educação Superior do Paraná (FESPPR).
+
+**Curso:** Bacharelado em Sistemas de Informação.
+
+**Disciplina:** Engenharia de Software.
+
+**Professor:** André Roberto Guerra.
+
+**Projeto:** Projeto 4 — ConectaIA.
+
+## 13. Considerações finais
+
+O ConectaIA representa uma iniciativa de aplicação dos conhecimentos de desenvolvimento de software e inteligência artificial em uma proposta voltada à inclusão social e à democratização do conhecimento tecnológico.
+
+A integração entre recursos educacionais, mecanismos de acessibilidade e inteligência artificial generativa demonstra o potencial das soluções computacionais para ampliar a autonomia dos indivíduos e reduzir barreiras relacionadas à utilização das tecnologias digitais.
+
+Além de seu caráter tecnológico, o projeto evidencia a importância de considerar as necessidades dos usuários, a experiência de utilização, a segurança da informação e a responsabilidade no desenvolvimento de sistemas inteligentes.
+
+Dessa forma, o ConectaIA constitui uma base acadêmica para estudos, aprimoramentos e futuras evoluções direcionadas à construção de ambientes digitais mais acessíveis, inclusivos e seguros.
+
+---
+
+**ConectaIA — Tecnologia, conhecimento e inclusão digital.**
+
+Projeto acadêmico desenvolvido no âmbito da Engenharia de Software.
