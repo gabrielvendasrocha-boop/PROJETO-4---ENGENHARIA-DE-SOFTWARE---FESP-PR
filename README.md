@@ -39,10 +39,11 @@ Módulo de interação por linguagem natural, integrado à API do Google Gemini,
 O assistente foi concebido para utilizar linguagem simples, respostas objetivas e explicações organizadas em etapas, considerando as necessidades de usuários com menor familiaridade tecnológica.
 
 A implementação contempla:
+
 - Envio de perguntas por texto.
 - Processamento do histórico recente da conversa.
 - Recebimento progressivo de respostas.
-- Orientações personalizadas conforme o contexto da interação.
+- Orientações contextualizadas.
 - Respostas locais predefinidas como mecanismo de contingência.
 
 ### 3.2. Trilhas de Sucesso
@@ -73,7 +74,7 @@ Disponibiliza recursos para adaptação da interface às necessidades dos usuár
 
 ### 3.5. Recursos de voz
 
-A aplicação utiliza recursos disponíveis nos navegadores para reconhecimento de fala e síntese de voz, possibilitando formas alternativas de interação.
+A aplicação utiliza recursos disponibilizados pelos navegadores para reconhecimento de fala e síntese de voz, possibilitando formas alternativas de interação.
 
 A disponibilidade desses recursos depende da compatibilidade do navegador, das permissões concedidas e dos dispositivos utilizados.
 
@@ -87,16 +88,16 @@ O desenvolvimento do ConectaIA utiliza tecnologias voltadas à construção de a
 
 | Tecnologia | Finalidade |
 |---|---|
-| React 18 | Construção da interface e componentes. |
-| TypeScript 5 | Tipagem e organização do código. |
-| Vite 6 | Ambiente de desenvolvimento e compilação. |
-| HTML5 | Estruturação da aplicação. |
-| CSS3 | Estilização e apresentação visual. |
-| Lucide React | Biblioteca de ícones. |
-| Google Gemini API | Integração com inteligência artificial generativa. |
-| Web Speech API | Reconhecimento de fala. |
-| SpeechSynthesis API | Conversão de texto em áudio. |
-| npm | Gerenciamento de dependências. |
+| React 18 | Construção da interface e componentes |
+| TypeScript 5 | Tipagem e organização do código |
+| Vite 6 | Ambiente de desenvolvimento e compilação |
+| HTML5 | Estruturação da aplicação |
+| CSS3 | Estilização e apresentação visual |
+| Lucide React | Biblioteca de ícones |
+| Google Gemini API | Integração com inteligência artificial generativa |
+| Web Speech API | Reconhecimento de fala |
+| SpeechSynthesis API | Conversão de texto em áudio |
+| npm | Gerenciamento de dependências |
 
 ## 5. Arquitetura do sistema
 
@@ -234,7 +235,7 @@ O ConectaIA apresenta orientações relacionadas à proteção de informações 
 
 A integração com o Google Gemini exige atenção especial ao gerenciamento de credenciais.
 
-**Importante:** chaves de API não devem ser publicadas no repositório nem incorporadas diretamente ao código disponibilizado ao navegador. O uso de variáveis com prefixo `VITE_` não garante sigilo, pois seus valores podem ser incorporados à aplicação compilada.
+**Importante:** chaves de API não devem ser publicadas no repositório nem incorporadas diretamente ao código disponibilizado ao navegador. Variáveis com prefixo `VITE_` não garantem sigilo, pois seus valores podem ser incorporados à aplicação compilada.
 
 Para disponibilização pública, recomenda-se implementar uma camada de back-end responsável por proteger as credenciais e intermediar as requisições ao serviço externo.
 
@@ -271,19 +272,30 @@ O ConectaIA encontra-se caracterizado como um protótipo acadêmico, possuindo l
 
 Essas limitações representam oportunidades para futuras melhorias e evolução tecnológica.
 
-## 12. Contexto acadêmico
+## 12. Equipe de desenvolvimento e contexto acadêmico
 
-O projeto foi desenvolvido no contexto acadêmico do curso de Bacharelado em Sistemas de Informação, como atividade prática relacionada à disciplina de Engenharia de Software.
+O projeto ConectaIA foi desenvolvido de forma colaborativa, no contexto acadêmico do curso de Bacharelado em Sistemas de Informação, como atividade prática da disciplina de Engenharia de Software.
 
-**Instituição:** Faculdade de Educação Superior do Paraná (FESPPR).
+### Integrantes
 
-**Curso:** Bacharelado em Sistemas de Informação.
+- Danilo Depetris Soares
+- Luís Gustavo Bueno Taquete
+- Gabriel Weber da Rocha
+- Júlia Barbosa de Almeida
+- Nityananda Portellada
+- Ana Carolina de Proença
 
-**Disciplina:** Engenharia de Software.
+### Informações acadêmicas
 
-**Professor:** André Roberto Guerra.
+- **Instituição:** Faculdade de Educação Superior do Paraná (FESPPR).
+- **Mantenedora:** Fundação de Estudos Sociais do Paraná.
+- **Curso:** Bacharelado em Sistemas de Informação.
+- **Disciplina:** Engenharia de Software.
+- **Professor:** André Roberto Guerra.
+- **Período:** 2º período.
+- **Projeto acadêmico:** Projeto 4 — ConectaIA.
 
-**Projeto:** Projeto 4 — ConectaIA.
+O desenvolvimento foi conduzido de maneira colaborativa, contemplando atividades de documentação, modelagem, implementação, validação e apresentação da solução tecnológica.
 
 ## 13. Considerações finais
 
@@ -300,3 +312,5 @@ Dessa forma, o ConectaIA constitui uma base acadêmica para estudos, aprimoramen
 **ConectaIA — Tecnologia, conhecimento e inclusão digital.**
 
 Projeto acadêmico desenvolvido no âmbito da Engenharia de Software.
+
+**Faculdade de Educação Superior do Paraná — FESPPR | 2026**
