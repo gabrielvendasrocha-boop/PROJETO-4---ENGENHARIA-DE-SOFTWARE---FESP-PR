@@ -314,3 +314,19 @@ Dessa forma, o ConectaIA constitui uma base acadêmica para estudos, aprimoramen
 Projeto acadêmico desenvolvido no âmbito da Engenharia de Software.
 
 **Faculdade de Educação Superior do Paraná — FESPPR | 2026**
+
+## LICENÇA E DIREITOS AUTORAIS  ##
+
+## Licença e Direitos Autorais
+
+© 2026 ConectaIA — Todos os direitos reservados.
+
+Este projeto foi desenvolvido no âmbito acadêmico por seus respectivos integrantes.
+
+O código-fonte, a documentação, a estrutura da aplicação e os materiais originais apresentados neste repositório são protegidos pelas normas de direitos autorais aplicáveis.
+
+A disponibilização pública do repositório tem finalidade acadêmica e demonstrativa, não representando autorização automática para reprodução, distribuição, comercialização, modificação ou utilização de seus conteúdos em outros projetos.
+
+Qualquer utilização, reprodução, modificação ou distribuição do material deverá ser previamente autorizada pelos respectivos titulares dos direitos autorais.
+
+A visualização pública do código não implica concessão de licença de uso.
